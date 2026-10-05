@@ -19,10 +19,10 @@ int main(void) {
     assert(IsEmpty("hola") == 0);
 
     /* ── GetLength — descomentar cuando implementes la funcion ──────────── */
-    /* assert(GetLength("") == 0); */
-    /* assert(GetLength("a") == 1); */
-    /* assert(GetLength("hola") == 4); */
-    /* assert(GetLength("hola mundo") == 10); */
+    assert(GetLength("") == 0);
+    assert(GetLength("a") == 1);
+    assert(GetLength("hola") == 4);
+    assert(GetLength("hola mundo") == 10);
 
     /* ── AreEqual — tiene un bug, estos tests ya estan activos ──────────── */
     assert(AreEqual("", "") == 1);
@@ -37,10 +37,11 @@ int main(void) {
     assert(AreDecimalDigits("12a") == 0);
     assert(AreDecimalDigits("") == 0);
 
-    /* ── Contains — descomentar cuando implementes la funcion ───────────── */
-    /* assert(Contains("hola", 'o') == 1); */
-    /* assert(Contains("hola", 'z') == 0); */
-    /* assert(Contains("", 'a') == 0); */
+    /* ── Contains ──────────────────────────────────────────────────────────── */
+    assert(Contains("hola", 'o') == 1);
+    assert(Contains("hola", 'z') == 0);
+    assert(Contains("", 'a') == 0);       /* Caso borde: cadena vacía */
+    assert(Contains("hola", '\0') == 0);  /* Caso borde: fin de cadena */
 
     return 0;
 }
